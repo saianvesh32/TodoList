@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}My Tasks - To-Do List{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">My Tasks</h1>
+     <ul>
+        {% for todo in todos %}
+        <li>
+            {{todo.title}}:{% if todo.completed %}Completed{% else %}Not Completed{%endif%}
+        </li>
+     </ul>
+   {% endfor %}
+</div>
+{% endblock %}
